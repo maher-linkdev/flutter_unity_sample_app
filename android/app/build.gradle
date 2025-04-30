@@ -8,7 +8,6 @@ plugins {
 android {
     namespace = "com.example.unity_flutter_workspace"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion '21.3.6528147'
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8

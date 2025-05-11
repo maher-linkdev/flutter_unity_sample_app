@@ -21,9 +21,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_unity_widget: e509f3109933aa0c63b1bc149ca3d5b90fb68543
+  flutter_unity_widget: a27ce087bcce8fb31bf89f90b0f8fc2abbc95576
   webview_flutter_wkwebview: a4af96a051138e28e29f60101d094683b9f82188
 
-PODFILE CHECKSUM: 7be2f5f74864d463a8ad433546ed1de7e0f29aef
+PODFILE CHECKSUM: 97c5d69eafe97c1d17f2a8070605a6ace06ad136
 
 COCOAPODS: 1.15.2

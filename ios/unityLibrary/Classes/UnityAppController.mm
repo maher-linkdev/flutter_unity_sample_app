@@ -611,6 +611,7 @@ extern "C" void UnityCleanupTrampoline()
     NSDictionary* arg = @{identifier: completionHandler};
     AppController_SendNotificationWithArg(kUnityHandleEventsForBackgroundURLSession, arg);
 }
+
 extern "C" void OnUnityMessage(const char* message)
 {
     if (GetAppController().unityMessageHandler) {
@@ -624,6 +625,7 @@ extern "C" void OnUnitySceneLoaded(const char* name, const int* buildIndex, cons
         GetAppController().unitySceneLoadedHandler(name, buildIndex, isLoaded, IsValid);
     }
 }
+
 @end
 
 

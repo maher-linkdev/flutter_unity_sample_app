@@ -12,9 +12,9 @@
 		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };
 		3CA613035A3BC8096E622391 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCB8A0BC881E9E7D9C9B5F7 /* Pods_Runner.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
-		8549DF0C2D4FA374007131E2 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85512DFD2D4F953A005D13E7 /* UnityFramework.framework */; };
-		8549DF0D2D4FA374007131E2 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85512DFD2D4F953A005D13E7 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8549DF0E2D4FA390007131E2 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
+		85BC6E822DD07A6E00AD1C8D /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85512DFD2D4F953A005D13E7 /* UnityFramework.framework */; };
+		85BC6E832DD07A6E00AD1C8D /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85512DFD2D4F953A005D13E7 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
@@ -31,13 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8549DF082D4F9BAB007131E2 /* Embed Frameworks */ = {
+		85BC6E842DD07A6E00AD1C8D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8549DF0D2D4FA374007131E2 /* UnityFramework.framework in Embed Frameworks */,
+				85BC6E832DD07A6E00AD1C8D /* UnityFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,7 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CA613035A3BC8096E622391 /* Pods_Runner.framework in Frameworks */,
-				8549DF0C2D4FA374007131E2 /* UnityFramework.framework in Frameworks */,
+				85BC6E822DD07A6E00AD1C8D /* UnityFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,13 +196,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
+				97C146EC1CF9000F007C117D /* Resources */,
 				4D4DA9B428A6B10B9397670E /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
-				97C146EB1CF9000F007C117D /* Frameworks */,
-				97C146EC1CF9000F007C117D /* Resources */,
+				85BC6E842DD07A6E00AD1C8D /* Embed Frameworks */,
 				D09F0B3C28ED43FC243B9EBF /* [CP] Embed Pods Frameworks */,
-				8549DF082D4F9BAB007131E2 /* Embed Frameworks */,
+				97C146EB1CF9000F007C117D /* Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 			);
 			buildRules = (
@@ -326,7 +326,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
 		};
 		D09F0B3C28ED43FC243B9EBF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -336,9 +336,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -479,6 +483,14 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = Y2QYY9349A;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/flutter_unity_widget\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/webview_flutter_wkwebview\"",
+					"\"${PODS_ROOT}/../UnityLibrary\"",
+					"\"${PODS_ROOT}/../.symlinks/flutter/ios-release\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}\"",
+				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -716,6 +728,14 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = Y2QYY9349A;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/flutter_unity_widget\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/webview_flutter_wkwebview\"",
+					"\"${PODS_ROOT}/../UnityLibrary\"",
+					"\"${PODS_ROOT}/../.symlinks/flutter/ios-release\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}\"",
+				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

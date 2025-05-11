@@ -1,4 +1,4 @@
-package com.example.unity_flutter_workspace
+package com.linkdev.unityFlutterWorkspace
 
 import io.flutter.embedding.android.FlutterActivity
 

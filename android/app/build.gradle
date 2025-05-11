@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.unity_flutter_workspace"
+    namespace = "com.linkdev.unityFlutterWorkspace"
     compileSdk = flutter.compileSdkVersion
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -22,7 +22,7 @@ android {
         checkReleaseBuilds false
     }
     defaultConfig {
-        applicationId = "com.example.unity_flutter_workspace"
+        applicationId = "com.linkdev.unityFlutterWorkspace"
         minSdk = 28
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
